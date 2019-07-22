@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/kist/catkin_ws/src/ros_robot_navigation/devel/setup.sh

@@ -1,0 +1,48 @@
+<launch>
+
+  <node pkg="shs_controller_test" type="DynamixelDriver" name="motor_driver">
+  </node>
+
+
+  <node pkg="ros_robot_navigation" type="odometry" name="odom">
+  </node>
+  <node pkg="ros_robot_navigation" type="motor_controller" name="motor_controller">
+  </node>
+
+
+    <node pkg="robot_setup_tf" type="tf_broadcaster" name="tf_broadcaster">
+  </node>
+  <node pkg="robot_setup_tf" type="tf_listener" name="tf_listener">
+  </node>
+
+
+
+
+
+  <!-- Map server -->
+  <arg name="map_file" default="/home/kist/map_new.yaml"/>
+  <node name="map_server" pkg="map_saver" type="map_saver" args="$(arg map_file)">
+	
+  </node>
+
+  <!-- AMCL -->
+  <include file="$(find amcl)/examples/amcl_diff.launch"/>
+
+
+
+
+
+
+  <!-- move_base -->  
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="/home/kist/catkin_ws/src/ros_robot_navigation/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="/home/kist/catkin_ws/src/ros_robot_navigation/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="/home/kist/catkin_ws/src/ros_robot_navigation/param/local_costmap_params.yaml" command="load" />
+    <rosparam file="/home/kist/catkin_ws/src/ros_robot_navigation/param/global_costmap_params.yaml" command="load" />
+
+    <rosparam file="/home/kist/catkin_ws/src/ros_robot_navigation/param/base_local_planner_params.yaml" command="load" />
+<rosparam file="/home/kist/catkin_ws/src/ros_robot_navigation/param/move_base_params.yaml" command="load" />
+
+  </node>
+</launch>

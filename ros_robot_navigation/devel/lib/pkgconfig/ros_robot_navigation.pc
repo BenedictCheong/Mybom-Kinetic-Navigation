@@ -1,0 +1,8 @@
+prefix=/home/kist/catkin_ws/src/ros_robot_navigation/devel
+
+Name: ros_robot_navigation
+Description: Description of ros_robot_navigation
+Version: 0.0.0
+Cflags: -I/home/kist/catkin_ws/src/ros_robot_navigation/devel/include -I/home/kist/catkin_ws/src/ros_robot_navigation/include
+Libs: -L/home/kist/catkin_ws/src/ros_robot_navigation/devel/lib -lshs_controller_test
+Requires: dynamixel_sdk roscpp std_msgs dynamixel_controller_msg action_execution_msgs move_base_msgs actionlib_msgs tf

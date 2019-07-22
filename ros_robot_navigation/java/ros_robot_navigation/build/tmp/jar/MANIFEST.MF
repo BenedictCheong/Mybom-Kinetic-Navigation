@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Export-Package: ros_robot_navigation;version="0.0.0";uses:="org.ros.in
+ ternal.message"
+Bundle-Version: 0.0.0
+Tool: Bnd-2.1.0.20130426-122213
+Bundle-Name: ros_robot_navigation
+Bnd-LastModified: 1538612818000
+Created-By: 1.7.0_151 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.ros.rosjava_messages.ros_robot_navigation
+Import-Package: org.ros.internal.message
+

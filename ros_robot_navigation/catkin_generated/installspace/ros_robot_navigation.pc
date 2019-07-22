@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: ros_robot_navigation
+Description: Description of ros_robot_navigation
+Version: 0.0.0
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib -lshs_controller_test
+Requires: dynamixel_sdk roscpp std_msgs dynamixel_controller_msg action_execution_msgs move_base_msgs actionlib_msgs tf
