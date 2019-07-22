@@ -33,40 +33,14 @@ sudo apt-get install ros-kinetic-gmapping
 sudo apt-get install ros-kinetic(indigo)-dynamixel-sdk
 ```
 
-##### 3. robot tf 파일 설치
+##### 3. Git을 이용한 mybom의 ros navigation package 사용을 위한 설정 파일 설치
 
 ```
 cd catkin_ws/src
-sudo git clone https://gitlab.com/howoncheong/robot_setup_tf.git
-cd ..
-catkin_make
-```
-
-##### 4. robot navigation setting 설치
-```
-cd src/
-sudo git clone https://gitlab.com/howoncheong/ros_robot_navigation.git
-cd ..
-catkin_make
-```
-
-##### 5. robot controller 설치
-```
-cd src/
-sudo git clone https://gitlab.com/howoncheong/ros_robot_controller.git
-cd ..
-catkin_make
-```
-
-##### 6. robot navigation interface 설치
-```
-cd src/
-sudo git clone https://gitlab.com/howoncheong/navigation_interface_pkg.git
+sudo git clone https://github.com/BenedictCheong/Mybom-Kinetic-Navigation.git
 cd ..
 catkin_make
 ```
 
 ## 3. 실행 방법
 채유정 연구원이 제공할 예정.
-
-
